@@ -1,0 +1,37 @@
+/* Nexus Tech — Admin Dashboard */
+body.admin{background:var(--bg)}
+.adm{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.adm-side{background:var(--navy-900);color:#cfe0ff;padding:16px 12px;position:sticky;top:0;height:100vh;overflow:auto;display:flex;flex-direction:column;gap:4px}
+.adm-side .brand{color:#fff;padding:6px 8px 14px}
+.adm-side button.nav-i{display:flex;gap:10px;align-items:center;width:100%;background:none;border:0;color:#b8c8e8;font:inherit;font-weight:600;padding:10px 12px;border-radius:10px;cursor:pointer;text-align:left}
+.adm-side button.nav-i:hover{background:#0f2447;color:#fff}
+.adm-side button.nav-i[aria-current="true"]{background:var(--grad);color:#fff}
+.adm-side .grp{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#6f86b5;margin:12px 10px 4px}
+.adm-main{padding:20px 24px 60px;min-width:0}
+.adm-top{display:flex;gap:10px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.adm-top h1{font-size:1.5rem;margin:0;flex:1}
+.adm-menu{display:none}
+@media (max-width:900px){
+  .adm{grid-template-columns:1fr}
+  .adm-side{position:fixed;inset:0 auto 0 0;width:260px;z-index:400;transform:translateX(-105%);transition:transform .3s}
+  .adm-side.open{transform:none}
+  .adm-menu{display:inline-grid}
+  .adm-main{padding:16px}
+}
+.kpis{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:22px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px}
+.kpi b{font-size:1.8rem;display:block}
+.tbl-wrap{overflow:auto;border:1px solid var(--border);border-radius:14px;background:var(--surface)}
+table.tbl{border-collapse:collapse;width:100%;min-width:640px}
+.tbl th,.tbl td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);font-size:.9rem;vertical-align:top}
+.tbl th{background:var(--surface-2);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tbl tr:last-child td{border-bottom:0}
+.row-actions{display:flex;gap:6px;flex-wrap:wrap}
+.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:10px}
+.login-wrap{min-height:100vh;display:grid;place-items:center;padding:20px;background:var(--hero-bg)}
+.login-card{width:min(430px,100%);background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.bar{height:10px;background:var(--surface-2);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--grad)}
+.stack{display:grid;gap:12px}
+.inline{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.kv{display:grid;grid-template-columns:130px 1fr;gap:6px 12px}
